@@ -52,8 +52,6 @@ class TransactionTableViewController: UITableViewController {
             cell.labelDescription.text = list[indexPath.row].description
             
         }
-        print("cell")
-        
         return cell
     }
     
@@ -81,7 +79,6 @@ class TransactionTableViewController: UITableViewController {
                 list.append(transaction)
             }
             DispatchQueue.main.async {
-                print("list \(list)")
                 self.list = list
                 self.tableView.reloadData()
             }

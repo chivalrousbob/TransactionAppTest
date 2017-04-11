@@ -15,8 +15,6 @@
 		211ADA1C1E98124800000EAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 211ADA1A1E98124800000EAB /* Main.storyboard */; };
 		211ADA1E1E98124800000EAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 211ADA1D1E98124800000EAB /* Assets.xcassets */; };
 		211ADA211E98124800000EAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 211ADA1F1E98124800000EAB /* LaunchScreen.storyboard */; };
-		211ADA2C1E98124800000EAB /* TestAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211ADA2B1E98124800000EAB /* TestAppTests.swift */; };
-		211ADA371E98124800000EAB /* TestAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211ADA361E98124800000EAB /* TestAppUITests.swift */; };
 		215097D81E9960540041D963 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215097D71E9960540041D963 /* DataManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -50,11 +48,7 @@
 		211ADA201E98124800000EAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		211ADA221E98124800000EAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		211ADA271E98124800000EAB /* TestAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		211ADA2B1E98124800000EAB /* TestAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAppTests.swift; sourceTree = "<group>"; };
-		211ADA2D1E98124800000EAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		211ADA321E98124800000EAB /* TestAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		211ADA361E98124800000EAB /* TestAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAppUITests.swift; sourceTree = "<group>"; };
-		211ADA381E98124800000EAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		215097D71E9960540041D963 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -87,8 +81,6 @@
 			isa = PBXGroup;
 			children = (
 				211ADA151E98124800000EAB /* TestApp */,
-				211ADA2A1E98124800000EAB /* TestAppTests */,
-				211ADA351E98124800000EAB /* TestAppUITests */,
 				211ADA141E98124800000EAB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -116,24 +108,6 @@
 				04455F161E9CED4A00743B38 /* myself.json */,
 			);
 			path = TestApp;
-			sourceTree = "<group>";
-		};
-		211ADA2A1E98124800000EAB /* TestAppTests */ = {
-			isa = PBXGroup;
-			children = (
-				211ADA2B1E98124800000EAB /* TestAppTests.swift */,
-				211ADA2D1E98124800000EAB /* Info.plist */,
-			);
-			path = TestAppTests;
-			sourceTree = "<group>";
-		};
-		211ADA351E98124800000EAB /* TestAppUITests */ = {
-			isa = PBXGroup;
-			children = (
-				211ADA361E98124800000EAB /* TestAppUITests.swift */,
-				211ADA381E98124800000EAB /* Info.plist */,
-			);
-			path = TestAppUITests;
 			sourceTree = "<group>";
 		};
 		211ADA441E98127B00000EAB /* DAO */ = {
@@ -302,7 +276,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				211ADA2C1E98124800000EAB /* TestAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,7 +283,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				211ADA371E98124800000EAB /* TestAppUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

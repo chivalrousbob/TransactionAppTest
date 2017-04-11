@@ -24,8 +24,6 @@ class SpendViewController: UIViewController {
             present(alertController, animated: true, completion: nil)
         }else{
             DataManager.shared.newTransaction(amount: textFieldAmount.text!, description: textFieldDescription.text!, currency: textFieldCurrency.text!, completion: {
-                print("tete")
-                
                 DispatchQueue.main.async {
                     let alertController = UIAlertController(title: "Congratulations!", message: "Transaction added successfully", preferredStyle: .alert)
                     alertController.addAction(defaultAction)

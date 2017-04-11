@@ -9,17 +9,11 @@
 import UIKit
 
 let BASE_URL = "https://interviewer-api.herokuapp.com/"
-enum JSONError: String, Error {
-    case NoData = "ERROR: no data"
-    case ConversionFailed = "ERROR: conversion from JSON failed"
-}
 
 final class DataManager: NSObject {
     
     //MARK: - Singleton
     static let shared = DataManager()
-    
-    //MARK: - Properties
     
     //MARK: - Functions
     
@@ -43,22 +37,15 @@ final class DataManager: NSObject {
             if let data = data{
                 do{
                     
-                    guard let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String:Any] else {
-                        throw JSONError.ConversionFailed
+                    if  let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String:Any]{
+                        let token = "Bearer \(json["token"]!)"
+                        let defaults = UserDefaults.standard
+                        defaults.set(token, forKey: "token")
+
+                        completion()
+
                     }
-                    let token = "Bearer \(json["token"]!)"
-                    let defaults = UserDefaults.standard
-                    defaults.set(token, forKey: "token")
-                    print("defaults = \(defaults.object(forKey: "token")!)")
-                    //                    for obj in json {
-                    //                        let object = obj //as! NSDictionary
-                    //                        let token = "Bearer \(object.value(forKey: "token")!)"
-                    //                        let defaults = UserDefaults.standard
-                    //                        defaults.set(token, forKey: "token")
-                    //                        print("defaults = \(defaults.data(forKey: "token"))")
-                    //                    }
-                    completion()
-                }catch let error as NSError {
+                    }catch let error as NSError {
                     print("ERROR: conversion from JSON failed \(error.localizedDescription)")
                 }
                 
@@ -75,7 +62,6 @@ final class DataManager: NSObject {
         var request = URLRequest(url:url!)
         let defaults = UserDefaults.standard
         let token = defaults.object(forKey: "token")! as! String
-        print("balance token  = \(token)")
         request.httpMethod = "GET"
         request.addValue("application/json", forHTTPHeaderField: "Accept")
         request.addValue(token, forHTTPHeaderField: "Authorization")
@@ -90,12 +76,12 @@ final class DataManager: NSObject {
             if let data = data{
                 do{
                     
-                    guard let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String:Any] else {
-                        throw JSONError.ConversionFailed
-                    }
-                   
+                    if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String:Any]  {
+                        
                     print("json = \(json)")
                     completion(json, nil)
+                    
+                    }
 
                 }catch let error as NSError {
                     print("ERROR: conversion from JSON failed \(error.localizedDescription)")
@@ -113,7 +99,6 @@ final class DataManager: NSObject {
         var request = URLRequest(url:url!)
         let defaults = UserDefaults.standard
         let token = defaults.object(forKey: "token")! as! String
-        print("balance token  = \(token)")
         request.httpMethod = "GET"
         request.addValue("application/json", forHTTPHeaderField: "Accept")
         request.addValue(token, forHTTPHeaderField: "Authorization")
@@ -128,12 +113,10 @@ final class DataManager: NSObject {
             if let data = data{
                 do{
                     
-                    guard let json = try JSONSerialization.jsonObject(with: data, options: []) as? [[String:Any]] else {
-                        throw JSONError.ConversionFailed
+                    if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [[String:Any]]  {
+                        print("json = \(json)")
+                        completion(json, nil)
                     }
-                    
-                    print("json = \(json)")
-                    completion(json, nil)
                     
                 }catch let error as NSError {
                     print("ERROR: conversion from JSON failed \(error.localizedDescription)")
@@ -152,14 +135,12 @@ final class DataManager: NSObject {
         var request = URLRequest(url:url!)
         let defaults = UserDefaults.standard
         let token = defaults.object(forKey: "token")! as! String
-        print("balance token  = \(token)")
         let formatter = ISO8601DateFormatter()
         let date = formatter.string(from: Date())
         let parametrs = ["date":date,"description":description,"amount":amount,"currency":currency]
-        //let parametrs = ["date":"2016-12-15T10:44:33Z","description":"test description","amount":"11","currency":"GBP"]
-        print("parametrs \(parametrs)")
+        
         do {
-            request.httpBody = try JSONSerialization.data(withJSONObject: parametrs, options: [])//JSONSerialization.WritingOptions.prettyPrinted)
+            request.httpBody = try JSONSerialization.data(withJSONObject: parametrs, options: [])
         }catch let error{
             print(error.localizedDescription)
         }
@@ -175,6 +156,7 @@ final class DataManager: NSObject {
                 print("statusCode should be 204, but is \(httpStatus.statusCode)")
                 print("response = \(String(describing: response))")
             }
+            
         completion()
     
     }
