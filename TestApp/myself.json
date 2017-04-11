@@ -7,9 +7,9 @@
     "team atmosphere":"positive",
     "performance":"high",
     "atmosphere":"productive",
-    "strengths": ["easy adaptation":"true",
-                  "dynamic":"true",
-                  "collaborative":"true"
-    ]
+    "strengths": { "easy adaptation":"true",
+        "dynamic":"true",
+        "collaborative":"true"
+    }
 }
 
