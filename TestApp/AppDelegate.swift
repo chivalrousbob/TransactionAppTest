@@ -16,6 +16,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        let defaults = UserDefaults.standard
+        defaults.removeObject(forKey: "token")
+//        DispatchQueue.global(qos: .userInitiated).async {
+//            print("This is run on the background queue")
+//            
+//            DispatchQueue.main.async {
+//                print("This is run on the main queue, after the previous code in outer block")
+//                let dm = DataManager()
+//                dm.getValidToken()
+//            }
+//        }
+        
+        
+
+              
         return true
     }
 
@@ -39,6 +54,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+        let defaults = UserDefaults.standard
+        defaults.removeObject(forKey: "token")
+        print("app teminate and delete token \(defaults.object(forKey: "token"))")
     }
 
 

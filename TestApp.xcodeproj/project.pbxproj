@@ -7,13 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04EA323C1E9A52D600A8B5D2 /* BalanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EA323B1E9A52D600A8B5D2 /* BalanceViewController.swift */; };
+		04EA323E1E9A542B00A8B5D2 /* SpendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EA323D1E9A542B00A8B5D2 /* SpendViewController.swift */; };
+		04EA32401E9A54C700A8B5D2 /* TransactionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EA323F1E9A54C700A8B5D2 /* TransactionTableViewController.swift */; };
+		04EA32421E9A551600A8B5D2 /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EA32411E9A551600A8B5D2 /* TransactionTableViewCell.swift */; };
 		211ADA171E98124800000EAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211ADA161E98124800000EAB /* AppDelegate.swift */; };
-		211ADA191E98124800000EAB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211ADA181E98124800000EAB /* ViewController.swift */; };
 		211ADA1C1E98124800000EAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 211ADA1A1E98124800000EAB /* Main.storyboard */; };
 		211ADA1E1E98124800000EAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 211ADA1D1E98124800000EAB /* Assets.xcassets */; };
 		211ADA211E98124800000EAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 211ADA1F1E98124800000EAB /* LaunchScreen.storyboard */; };
 		211ADA2C1E98124800000EAB /* TestAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211ADA2B1E98124800000EAB /* TestAppTests.swift */; };
 		211ADA371E98124800000EAB /* TestAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211ADA361E98124800000EAB /* TestAppUITests.swift */; };
+		215097D81E9960540041D963 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215097D71E9960540041D963 /* DataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +38,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04455F161E9CED4A00743B38 /* myself.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = myself.json; sourceTree = "<group>"; };
+		04EA323B1E9A52D600A8B5D2 /* BalanceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BalanceViewController.swift; sourceTree = "<group>"; };
+		04EA323D1E9A542B00A8B5D2 /* SpendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpendViewController.swift; sourceTree = "<group>"; };
+		04EA323F1E9A54C700A8B5D2 /* TransactionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionTableViewController.swift; sourceTree = "<group>"; };
+		04EA32411E9A551600A8B5D2 /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCell.swift; sourceTree = "<group>"; };
 		211ADA131E98124800000EAB /* TestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		211ADA161E98124800000EAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		211ADA181E98124800000EAB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		211ADA1B1E98124800000EAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		211ADA1D1E98124800000EAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		211ADA201E98124800000EAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +55,7 @@
 		211ADA321E98124800000EAB /* TestAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		211ADA361E98124800000EAB /* TestAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAppUITests.swift; sourceTree = "<group>"; };
 		211ADA381E98124800000EAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		215097D71E9960540041D963 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +106,14 @@
 		211ADA151E98124800000EAB /* TestApp */ = {
 			isa = PBXGroup;
 			children = (
+				211ADA451E98128900000EAB /* Controller */,
+				211ADA441E98127B00000EAB /* DAO */,
 				211ADA161E98124800000EAB /* AppDelegate.swift */,
-				211ADA181E98124800000EAB /* ViewController.swift */,
 				211ADA1A1E98124800000EAB /* Main.storyboard */,
 				211ADA1D1E98124800000EAB /* Assets.xcassets */,
 				211ADA1F1E98124800000EAB /* LaunchScreen.storyboard */,
 				211ADA221E98124800000EAB /* Info.plist */,
+				04455F161E9CED4A00743B38 /* myself.json */,
 			);
 			path = TestApp;
 			sourceTree = "<group>";
@@ -123,6 +134,25 @@
 				211ADA381E98124800000EAB /* Info.plist */,
 			);
 			path = TestAppUITests;
+			sourceTree = "<group>";
+		};
+		211ADA441E98127B00000EAB /* DAO */ = {
+			isa = PBXGroup;
+			children = (
+				215097D71E9960540041D963 /* DataManager.swift */,
+			);
+			name = DAO;
+			sourceTree = "<group>";
+		};
+		211ADA451E98128900000EAB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				04EA323B1E9A52D600A8B5D2 /* BalanceViewController.swift */,
+				04EA323D1E9A542B00A8B5D2 /* SpendViewController.swift */,
+				04EA323F1E9A54C700A8B5D2 /* TransactionTableViewController.swift */,
+				04EA32411E9A551600A8B5D2 /* TransactionTableViewCell.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,7 +289,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				211ADA191E98124800000EAB /* ViewController.swift in Sources */,
+				04EA323E1E9A542B00A8B5D2 /* SpendViewController.swift in Sources */,
+				04EA32421E9A551600A8B5D2 /* TransactionTableViewCell.swift in Sources */,
+				04EA32401E9A54C700A8B5D2 /* TransactionTableViewController.swift in Sources */,
+				215097D81E9960540041D963 /* DataManager.swift in Sources */,
+				04EA323C1E9A52D600A8B5D2 /* BalanceViewController.swift in Sources */,
 				211ADA171E98124800000EAB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -414,7 +448,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = TestApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nouri.TestApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -426,7 +462,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = TestApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nouri.TestApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -507,6 +545,7 @@
 				211ADA3D1E98124800000EAB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		211ADA3E1E98124800000EAB /* Build configuration list for PBXNativeTarget "TestAppTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +554,7 @@
 				211ADA401E98124800000EAB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		211ADA411E98124800000EAB /* Build configuration list for PBXNativeTarget "TestAppUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +563,7 @@
 				211ADA431E98124800000EAB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
