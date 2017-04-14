@@ -7,10 +7,9 @@
 
 3) Alamofire is one of my favourite library is a HTTP networking library, built on top of NSURLSession and the Foundation URL Loading System. i could use it in this app but as it is a little test to test my knowledge on ios i prefer to show my knowldge in core ios without any extern library.
 
-4)I think the great thing I learnt this past year is how to adapt myself to a team and different sort of application envolving various technologies, i would like to  improve my skills and knowledge in project managment.
+4) I think the great thing I learnt this past year is how to adapt myself to a team and different sort of application envolving various technologies, i would like to  improve my skills and knowledge in project managment.
 
-5)I never had to track down a production performance issue however End User Experience Monitoring, Application Mapping and Transaction profiling
-will help identify problematic haystacks (tiers) in the application. To do this I would use a deep diagnostics tools that will help identify the causes and reduce the time of troubleshooting. Many of these tools are available to integrate with the application code 
+5) I never had to track down a production performance issue however End User Experience Monitoring, Application Mapping and Transaction profiling will help identify problematic haystacks (tiers) in the application. To do this I would use a deep diagnostics tools that will help identify the causes and reduce the time of troubleshooting. Many of these tools are available to integrate with the application code 
 
 6) For instance, response from instagram API about my profile does not give me any information about people that follows me or i follow apart from their ID. Therefore to create any social platform based on our followers we can not populate needed amount of data, as we have to make call to the server each time for each following/followed person. Instagram restrict us to make over certain amount of calls so current API would not be efficient. Solution would be to populate basic info about following/followed person, the same way that Facebook does with latest post in the response to the profile call.
 
